@@ -1,0 +1,9 @@
+all: add_integer
+add_integer: add_integer.cpp
+	g++ -o add_integer add_integer.cpp
+dump: add_integer
+	objdump -d add_integer > add_integer.asm
+clean:
+	rm -f add_integer add_integer.asm
+run: add_integer
+	./add_integer
